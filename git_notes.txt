@@ -1,0 +1,24 @@
+VCS - version control system
+centralized or distributed
+repository
+commit
+hash function
+git config --system
+	все пользователи системы
+git config --global
+	конкретный пользователь системы
+git config --local
+	текущий репозиторий
+git config --global user.name "fedyok8"
+git config --global user.email fedyok8@yandex.ru
+git init
+git log
+	история изменений
+
+git status
+	статус всех файлов
+
+tracked or untracked
+tracked = {modified | staged | committed}
+index (staging area)	files or directories in staged state
+
