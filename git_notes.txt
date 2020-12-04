@@ -3,6 +3,18 @@ centralized or distributed
 repository
 commit
 hash function
+tracked or untracked
+tracked = {modified | staged | committed}
+index (staging area)	pull of files or directories in staged state
+комит файла, который модифицировался ещё и после добавления в индекс не закомитит последние изменения
+.gitignore - файл для описания исключения для git
+
+
+
+
+
+
+
 git config --system
 	все пользователи системы
 git config --global
@@ -13,12 +25,40 @@ git config --global user.name "fedyok8"
 git config --global user.email fedyok8@yandex.ru
 git init
 git log
-	история изменений
-
+	история изменений и информация о хэш сумме комитов
 git status
 	статус всех файлов
+git add app.py
+	добавить файл в index
+git commit -m "bug fixes 1"
+	закомитить с сообщением "..."
+git log -p
+	история комитов с кратким описанием изменений
+git restore app.py
+	откатить изменения к последнему комиту для файла, который modified
+git diff
+	отобразить изменения после последнего комита
+git diff --staged
+	отобразить изменения после последнего комита, находящиеся в index
+git commit -am "bug fixes 3"
+	закомитить изменения во всех трэкаемых файлах
+git mv app.py application.py
+	переименовать файл(автоматически добавляет в index)
+git rm application.py
+	удалить файл(автоматически добавляет в index)
+git restore --staged application.py
+	восстанавливает удаленный файл из index
+git restore application.py
+	восстанавливает удаленный файл
+git rm --cached application.py
+	удаляет файл(авто index), но не удаляет сам файл, делая его untracked
+git branch new-api
+	создать новую ветку
+git checkout new-api
+	переключиться на ветку new-api
 
-tracked or untracked
-tracked = {modified | staged | committed}
-index (staging area)	files or directories in staged state
+
+
+
+
 
