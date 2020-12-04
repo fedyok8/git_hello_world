@@ -8,8 +8,7 @@ tracked = {modified | staged | committed}
 index (staging area)	pull of files or directories in staged state
 комит файла, который модифицировался ещё и после добавления в индекс не закомитит последние изменения
 .gitignore - файл для описания исключения для git
-
-
+fastforward - механизм мёрджа(git merge ...) для веток
 
 
 
@@ -56,6 +55,23 @@ git branch new-api
 	создать новую ветку
 git checkout new-api
 	переключиться на ветку new-api
+git branch -a
+	посмотреть, какие ветки есть в репозитории
+git merge bugfix
+	выполнить слияние текущей ветки и ветки bugfix
+git branch -d bugfix
+	удалить ветку bugfix
+
+
+
+
+
+
+
+
+
+
+
 
 
 
