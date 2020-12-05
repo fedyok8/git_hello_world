@@ -9,6 +9,10 @@ index (staging area)	pull of files or directories in staged state
 комит файла, который модифицировался ещё и после добавления в индекс не закомитит последние изменения
 .gitignore - файл для описания исключения для git
 fastforward - механизм мёрджа(git merge ...) для веток
+метка слежения
+сервер принимает правки через pull если это можно сделать с помощью fastforward
+
+
 
 
 
@@ -65,7 +69,35 @@ git checkout e375e1befbef6970a66770ee6e8235051edd65ef
 	переключить HEAD на конкретный коммит
 git checkout -b dev
 	создать ветку и переместить на нее HEAD
-
+git checkout -b new-branch e375e1befbef6970a66770ee6e8235051edd65ef
+	создать ветку от конкретного коммита и переместить на неё HEAD
+git checkout test.txt
+	вернуть состояние файла к состоянию последнего коммита в этой ветке (как git restore)
+git reset --hard e375e1befbef6970a66770ee6e8235051edd65ef
+	переставляет указатель текущей ветки(вместе с HEAD) на конкретный коммит
+git remote add origin https://github.com/fedyok8/git_hello_world.git
+	добавить удаленный сервер origin
+git remote -v
+	посмотреть, какие есть репозитории
+git push origin master
+	отправить изменения на сервер
+git clone https://github.com/fedyok8/git_hello_world.git
+	скопировать к себе репозиторий
+git pull origin master
+	забирает изменения с удаленного сервера
+	git pull =git {fatch+merge}
+git fetch origin
+	получить актуальную информацию о состоянии удаленных веток и обновить метку слежения
+git merge origin/master
+	мёрдж своей локальной ветки с удаленной
+git push --set-upstream origin master
+	связывает локальную ветку master с origin
+	один раз выполнив эту команду можно теперь писать не
+	git push origin master
+	а просто (находясь на ветке master)
+	git push
+git push origin master -f
+	форсированный пуш с переписыванием истории комитов если необходимо
 
 
 
