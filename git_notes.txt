@@ -60,7 +60,14 @@ git branch -a
 git merge bugfix
 	выполнить слияние текущей ветки и ветки bugfix
 git branch -d bugfix
-	удалить ветку bugfix
+	удалить ветку bugfix (чтобы удалить несмёрдженную ветку, нужно вместо -d поставить -D но это опасно)
+git checkout e375e1befbef6970a66770ee6e8235051edd65ef
+	переключить HEAD на конкретный коммит
+git checkout -b dev
+	создать ветку и переместить на нее HEAD
+
+
+
 
 
 
